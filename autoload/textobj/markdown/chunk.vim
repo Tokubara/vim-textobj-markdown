@@ -1,5 +1,5 @@
 " forward chunk
-function! textobj#markdown#chunk#af()
+function! g:textobj#markdown#chunk#select_a()
   let l:tail = search('^```$', 'nWc')
   let l:head = search('^```', 'nWbc')
   if !l:head || !l:tail
@@ -9,7 +9,7 @@ function! textobj#markdown#chunk#af()
   return ['V', [0, l:head, 1, 0], [0, l:tail, 1, 0]]
 endfunction
 
-function! textobj#markdown#chunk#if()
+function! g:textobj#markdown#chunk#select_i()
   let l:tail = search('^```$', 'nWc')
   let l:head = search('^```', 'nWbc')
   if !l:head || !l:tail

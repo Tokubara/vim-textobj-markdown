@@ -1,14 +1,35 @@
 call textobj#user#plugin('markdown', {
+      \   'sheader': {
+      \     'select-a-function': 'textobj#markdown#sheader#select_a',
+      \     'select-a': '<buffer>as',
+      \     'select-i-function': 'textobj#markdown#sheader#select_i',
+      \     'select-i': '<buffer>is',
+      \     '*move-n-function*': 'textobj#markdown#sheader#move_n',
+      \     '*move-p-function*': 'textobj#markdown#sheader#move_p',
+      \     'move-n': '<buffer>]s',
+      \     'move-p': '<buffer>[s',
+      \     'region-type': 'V',
+      \   },
+      \   'header': {
+      \     'select-a-function': 'textobj#markdown#sheader#select_a',
+      \     'select-a': '<buffer>ah',
+      \     'select-i-function': 'textobj#markdown#sheader#select_i',
+      \     'select-i': '<buffer>ih',
+      \     'pattern': '^#\+\s',
+      \     'move-n': '<buffer>]h',
+      \     'move-p': '<buffer>[h',
+      \     'region-type': 'V',
+      \   },
       \   'chunk': {
-      \     'select-a-function': 'textobj#markdown#chunk#af',
+      \     'select-a-function': 'textobj#markdown#chunk#select_a',
       \     'select-a': '<buffer>af',
-      \     'select-i-function': 'textobj#markdown#chunk#if',
+      \     'select-i-function': 'textobj#markdown#chunk#select_i',
       \     'select-i': '<buffer>if',
       \     'pattern': '^```',
       \     'move-n': '<buffer>]f',
       \     'move-p': '<buffer>[f',
       \     'region-type': 'V',
-      \   },
+      \   }
       \ })
       " \   'Bchunk': {
       " \     'select-a-function': 'textobj#markdown#chunk#aF',
